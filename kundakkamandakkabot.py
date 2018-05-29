@@ -2,6 +2,7 @@ import praw
 import config
 import os
 import random
+import time
 
 def bot_login():
     rlogin = praw.Reddit(username = config.username, password = config.password,
@@ -46,5 +47,5 @@ print(comments_replied_to)
 
 while True:
     run_bot(rlogin, comments_replied_to)
-    sleep(7200)
+    time.sleep(7200)
 
